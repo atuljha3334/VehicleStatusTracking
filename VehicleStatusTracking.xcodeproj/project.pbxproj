@@ -13,6 +13,9 @@
 		CE1CCAB3273F780F008F41C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1CCAB1273F780F008F41C8 /* Main.storyboard */; };
 		CE1CCAB5273F7814008F41C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1CCAB4273F7814008F41C8 /* Assets.xcassets */; };
 		CE1CCAB8273F7814008F41C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1CCAB6273F7814008F41C8 /* LaunchScreen.storyboard */; };
+		CEBD4E0E273F81B800F11196 /* TruckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */; };
+		CEBD4E10273F81C800F11196 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E0F273F81C800F11196 /* ServiceManager.swift */; };
+		CEBD4E12273F83E600F11196 /* TruckStatusResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CE1CCAB4273F7814008F41C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1CCAB7273F7814008F41C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1CCAB9273F7814008F41C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListTableViewCell.swift; sourceTree = "<group>"; };
+		CEBD4E0F273F81C800F11196 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckStatusResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				CE1CCAB4273F7814008F41C8 /* Assets.xcassets */,
 				CE1CCAB6273F7814008F41C8 /* LaunchScreen.storyboard */,
 				CE1CCAB9273F7814008F41C8 /* Info.plist */,
+				CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */,
+				CEBD4E0F273F81C800F11196 /* ServiceManager.swift */,
+				CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */,
 			);
 			path = VehicleStatusTracking;
 			sourceTree = "<group>";
@@ -140,7 +149,10 @@
 			files = (
 				CE1CCAB0273F780F008F41C8 /* ViewController.swift in Sources */,
 				CE1CCAAC273F780F008F41C8 /* AppDelegate.swift in Sources */,
+				CEBD4E0E273F81B800F11196 /* TruckListTableViewCell.swift in Sources */,
+				CEBD4E12273F83E600F11196 /* TruckStatusResponseModel.swift in Sources */,
 				CE1CCAAE273F780F008F41C8 /* SceneDelegate.swift in Sources */,
+				CEBD4E10273F81C800F11196 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
