@@ -23,9 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     
     private func setupNavBar() {
-        let maps    = UIImage(systemName: "location")
+        let maps    = UIImage(named: "google-maps")
         let searchImage  = UIImage(systemName: "magnifyingglass")
-        let refresh = UIImage(systemName: "arrow.clockwise")
+        let refresh = UIImage(named: "refresh")
         let mapButton = UIBarButtonItem(image: maps,  style: .plain, target: self, action: #selector(mapNavigation))
         let searchButton = UIBarButtonItem(image: searchImage,  style: .plain, target: self, action: nil)
         let refreshButton = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(refreshAction))

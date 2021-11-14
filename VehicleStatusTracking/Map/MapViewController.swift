@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
     
     func setupNavBar() {
         let listButtton = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(listOfTrucks))
-        let refreshButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"),  style: .plain, target: self, action: nil)
+        let refreshButton = UIBarButtonItem(image: UIImage(named: "refresh"),  style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItems = [listButtton, refreshButton]
     }
     
@@ -40,7 +40,11 @@ class MapViewController: UIViewController {
             print(lat, lon)
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            marker.icon = UIImage(systemName: "car")
+            if i.lastRunningState?.truckRunningState == 0 {
+                marker.icon = UIImage(named: "truckRed")
+            } else {
+                marker.icon = UIImage(named: "truckGreen")
+            }
             marker.map = mapSubView
         }
     }
