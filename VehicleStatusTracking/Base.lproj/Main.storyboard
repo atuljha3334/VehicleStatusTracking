@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trucks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VehicleStatusTracking" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,37 +31,25 @@
                                                     <rect key="frame" x="5" y="5" width="404" height="84"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-KK-R5A">
-                                                            <rect key="frame" x="8" y="8" width="150" height="19.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="150" id="hgP-31-x7C"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="8" y="8" width="103" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.94757976399999999" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-5F-GRB">
-                                                            <rect key="frame" x="8" y="61.5" width="180" height="14.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="180" id="xtU-3v-xef"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <rect key="frame" x="8" y="59" width="96.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4i-wO-SOE">
-                                                            <rect key="frame" x="316" y="61.5" width="80" height="14.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="80" id="wqd-Pd-zOh"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="359.5" y="60.5" width="36.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latest update" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD6-RJ-uVJ">
-                                                            <rect key="frame" x="246" y="10.5" width="150" height="14.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="150" id="9Sg-Hs-L0k"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="321.5" y="10.5" width="74.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -69,17 +57,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="d4i-wO-SOE" firstAttribute="leading" secondItem="dXk-5F-GRB" secondAttribute="trailing" constant="128" id="09B-l2-4gB"/>
-                                                        <constraint firstItem="wD6-RJ-uVJ" firstAttribute="leading" secondItem="q8T-KK-R5A" secondAttribute="trailing" constant="88" id="3Ol-kA-vIz"/>
                                                         <constraint firstAttribute="height" constant="84" id="3ud-cs-UeQ"/>
                                                         <constraint firstItem="q8T-KK-R5A" firstAttribute="leading" secondItem="vPJ-8k-75y" secondAttribute="leading" constant="8" id="J6H-3k-v9x"/>
                                                         <constraint firstAttribute="trailing" secondItem="wD6-RJ-uVJ" secondAttribute="trailing" constant="8" id="KsI-Dw-Iq2"/>
                                                         <constraint firstAttribute="bottom" secondItem="dXk-5F-GRB" secondAttribute="bottom" constant="8" id="PHw-lb-LEw"/>
-                                                        <constraint firstItem="wD6-RJ-uVJ" firstAttribute="centerY" secondItem="q8T-KK-R5A" secondAttribute="centerY" id="Px2-9Q-S1Z"/>
+                                                        <constraint firstItem="wD6-RJ-uVJ" firstAttribute="centerY" secondItem="q8T-KK-R5A" secondAttribute="centerY" id="S3H-Lk-9zr"/>
+                                                        <constraint firstItem="dXk-5F-GRB" firstAttribute="leading" secondItem="q8T-KK-R5A" secondAttribute="leading" id="aEj-2b-o9w"/>
                                                         <constraint firstItem="q8T-KK-R5A" firstAttribute="top" secondItem="vPJ-8k-75y" secondAttribute="top" constant="8" id="aJB-d3-Fxm"/>
                                                         <constraint firstItem="d4i-wO-SOE" firstAttribute="trailing" secondItem="wD6-RJ-uVJ" secondAttribute="trailing" id="aVd-gi-P2T"/>
-                                                        <constraint firstItem="dXk-5F-GRB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q8T-KK-R5A" secondAttribute="leading" id="eiS-4N-yap"/>
-                                                        <constraint firstItem="dXk-5F-GRB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q8T-KK-R5A" secondAttribute="leading" id="gFa-Am-L4T"/>
                                                         <constraint firstItem="d4i-wO-SOE" firstAttribute="centerY" secondItem="dXk-5F-GRB" secondAttribute="centerY" id="ggC-fv-IId"/>
                                                     </constraints>
                                                 </view>
@@ -115,7 +100,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W6F-Ub-WPi" secondAttribute="bottom" id="uJU-Du-q1s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="12i-aH-lRL"/>
+                    <navigationItem key="navigationItem" title="Trucks" id="12i-aH-lRL"/>
                     <connections>
                         <outlet property="tableView" destination="W6F-Ub-WPi" id="o56-Is-nuU"/>
                     </connections>
@@ -132,6 +117,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIF-Y7-fdi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.85158981643356646" green="0.27058823529411763" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="-200" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
