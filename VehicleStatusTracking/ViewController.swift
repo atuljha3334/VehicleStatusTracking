@@ -26,11 +26,21 @@ class ViewController: UIViewController, UITableViewDelegate {
         let maps    = UIImage(systemName: "location")
         let searchImage  = UIImage(systemName: "magnifyingglass")
         let refresh = UIImage(systemName: "arrow.clockwise")
-        let mapButton = UIBarButtonItem(image: maps,  style: .plain, target: self, action: nil)
+        let mapButton = UIBarButtonItem(image: maps,  style: .plain, target: self, action: #selector(mapNavigation))
         let searchButton = UIBarButtonItem(image: searchImage,  style: .plain, target: self, action: nil)
-        let refreshButton = UIBarButtonItem(image: refresh, style: .plain, target: self, action: nil)
+        let refreshButton = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(refreshAction))
         navigationItem.rightBarButtonItems = [mapButton, searchButton, refreshButton]
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    @objc func mapNavigation() {
+        let vc = MapViewController()
+        vc.truckListData = truckData
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func refreshAction() {
+        truckRunningStatusServiceCall()
     }
     
     private func truckRunningStatusServiceCall() {

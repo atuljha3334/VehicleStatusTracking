@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FED47E4B36B263ABCC372FB /* Pods_VehicleStatusTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2951D0F4A1964AB2C60E33A /* Pods_VehicleStatusTracking.framework */; };
 		CE1CCAAC273F780F008F41C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCAAB273F780F008F41C8 /* AppDelegate.swift */; };
 		CE1CCAAE273F780F008F41C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCAAD273F780F008F41C8 /* SceneDelegate.swift */; };
 		CE1CCAB0273F780F008F41C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCAAF273F780F008F41C8 /* ViewController.swift */; };
@@ -16,9 +17,14 @@
 		CEBD4E0E273F81B800F11196 /* TruckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */; };
 		CEBD4E10273F81C800F11196 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E0F273F81C800F11196 /* ServiceManager.swift */; };
 		CEBD4E12273F83E600F11196 /* TruckStatusResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */; };
+		CEBD4E162740BB2700F11196 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E142740BB2700F11196 /* MapViewController.swift */; };
+		CEBD4E172740BB2700F11196 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBD4E152740BB2700F11196 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93E3892DCD20CC6F814F2541 /* Pods-VehicleStatusTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleStatusTracking.release.xcconfig"; path = "Target Support Files/Pods-VehicleStatusTracking/Pods-VehicleStatusTracking.release.xcconfig"; sourceTree = "<group>"; };
+		A2951D0F4A1964AB2C60E33A /* Pods_VehicleStatusTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleStatusTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADD83DB7D8245E924C78FC8 /* Pods-VehicleStatusTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleStatusTracking.debug.xcconfig"; path = "Target Support Files/Pods-VehicleStatusTracking/Pods-VehicleStatusTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1CCAA8273F780F008F41C8 /* VehicleStatusTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleStatusTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1CCAAB273F780F008F41C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1CCAAD273F780F008F41C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListTableViewCell.swift; sourceTree = "<group>"; };
 		CEBD4E0F273F81C800F11196 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckStatusResponseModel.swift; sourceTree = "<group>"; };
+		CEBD4E142740BB2700F11196 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CEBD4E152740BB2700F11196 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FED47E4B36B263ABCC372FB /* Pods_VehicleStatusTracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63CA6C55D21314A42DC31354 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AADD83DB7D8245E924C78FC8 /* Pods-VehicleStatusTracking.debug.xcconfig */,
+				93E3892DCD20CC6F814F2541 /* Pods-VehicleStatusTracking.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AEC9D2094187757194A03181 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2951D0F4A1964AB2C60E33A /* Pods_VehicleStatusTracking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE1CCA9F273F780F008F41C8 = {
 			isa = PBXGroup;
 			children = (
 				CE1CCAAA273F780F008F41C8 /* VehicleStatusTracking */,
 				CE1CCAA9273F780F008F41C8 /* Products */,
+				63CA6C55D21314A42DC31354 /* Pods */,
+				AEC9D2094187757194A03181 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +91,7 @@
 		CE1CCAAA273F780F008F41C8 /* VehicleStatusTracking */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD4E132740BAF400F11196 /* Map */,
 				CE1CCAAB273F780F008F41C8 /* AppDelegate.swift */,
 				CE1CCAAD273F780F008F41C8 /* SceneDelegate.swift */,
 				CE1CCAAF273F780F008F41C8 /* ViewController.swift */,
@@ -76,6 +106,15 @@
 			path = VehicleStatusTracking;
 			sourceTree = "<group>";
 		};
+		CEBD4E132740BAF400F11196 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD4E142740BB2700F11196 /* MapViewController.swift */,
+				CEBD4E152740BB2700F11196 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1CCABC273F7814008F41C8 /* Build configuration list for PBXNativeTarget "VehicleStatusTracking" */;
 			buildPhases = (
+				B275A24AF43ED7B15ACFE19C /* [CP] Check Pods Manifest.lock */,
 				CE1CCAA4273F780F008F41C8 /* Sources */,
 				CE1CCAA5273F780F008F41C8 /* Frameworks */,
 				CE1CCAA6273F780F008F41C8 /* Resources */,
+				4F9F679FB3E28E9E7E43BBD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,10 +178,53 @@
 				CE1CCAB8273F7814008F41C8 /* LaunchScreen.storyboard in Resources */,
 				CE1CCAB5273F7814008F41C8 /* Assets.xcassets in Resources */,
 				CE1CCAB3273F780F008F41C8 /* Main.storyboard in Resources */,
+				CEBD4E172740BB2700F11196 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F9F679FB3E28E9E7E43BBD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VehicleStatusTracking/Pods-VehicleStatusTracking-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VehicleStatusTracking/Pods-VehicleStatusTracking-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VehicleStatusTracking/Pods-VehicleStatusTracking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B275A24AF43ED7B15ACFE19C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VehicleStatusTracking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE1CCAA4273F780F008F41C8 /* Sources */ = {
@@ -153,6 +237,7 @@
 				CEBD4E12273F83E600F11196 /* TruckStatusResponseModel.swift in Sources */,
 				CE1CCAAE273F780F008F41C8 /* SceneDelegate.swift in Sources */,
 				CEBD4E10273F81C800F11196 /* ServiceManager.swift in Sources */,
+				CEBD4E162740BB2700F11196 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +381,7 @@
 		};
 		CE1CCABD273F7814008F41C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AADD83DB7D8245E924C78FC8 /* Pods-VehicleStatusTracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +410,7 @@
 		};
 		CE1CCABE273F7814008F41C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E3892DCD20CC6F814F2541 /* Pods-VehicleStatusTracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
