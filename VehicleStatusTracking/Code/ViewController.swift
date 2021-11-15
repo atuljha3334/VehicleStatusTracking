@@ -7,12 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController {
     
+    // MARK: - Outlets
+
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Variables
+
     var responseData: ResponseData!
     var truckData = [Data]()
-    let deviceTimeStamp = Int(NSDate().timeIntervalSince1970 * 1000)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         let searchButton = UIBarButtonItem(image: searchImage,  style: .plain, target: self, action: nil)
         let refreshButton = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(refreshAction))
         navigationItem.rightBarButtonItems = [mapButton, searchButton, refreshButton]
+        navigationController?.navigationBar.backgroundColor = .red
         navigationController?.navigationBar.tintColor = .white
     }
     
@@ -43,6 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate {
         truckRunningStatusServiceCall()
     }
     
+    // MARK: - API Calling
+
     private func truckRunningStatusServiceCall() {
         ServiceManager.shared.getTruckStatusService { [weak self] result in
             guard let strongSelf = self else { return }
@@ -60,6 +67,12 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
+
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return truckData.count
@@ -67,46 +80,9 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TruckListTableViewCell") as? TruckListTableViewCell
-        cell?.truckNumberLabel.text = truckData[indexPath.row].truckNumber
-        let stopStartTime = truckData[indexPath.row].lastRunningState?.stopStartTime ?? 0
-        let truckRunningState = truckData[indexPath.row].lastRunningState?.truckRunningState
-        if truckRunningState == 0 {
-            cell?.runningStatusLabel.text = "Stopped since last \(lastRunningTime(time: stopStartTime))"
-            cell?.speedLabel.isHidden = true
-        } else {
-            cell?.runningStatusLabel.text = "Running since last \(lastRunningTime(time: stopStartTime))"
-            cell?.speedLabel.text = "\(truckData[indexPath.row].lastWaypoint?.speed ?? 0.00) k/h"
-        }
-        let updatedTime = truckData[indexPath.row].lastWaypoint?.createTime ?? 0
-        cell?.latestUpdateLabel.text = "\(lastUpdatedTime(time: updatedTime))"
+        cell?.speedLabel.isHidden = false
+        cell?.latestUpdateLabel.isHidden = false
+        cell?.datasource = truckData[indexPath.row]
         return cell ?? UITableViewCell()
-    }
-    
-    func lastRunningTime(time: Int) -> String {
-        let lastRunningTimeDifference = deviceTimeStamp - time
-        let epochDiff1 = lastRunningTimeDifference
-        var diff = ""
-        if epochDiff1 / 86400000 >= 1 {
-            diff = "\(epochDiff1 / 86400000) days"
-        } else if epochDiff1 / 3600000 >= 1 {
-            diff = "\(epochDiff1 / 3600000) hours"
-        } else if epochDiff1 / 60000 >= 1 {
-            diff = "\(epochDiff1 / 3600000) mins"
-        }
-        return diff
-    }
-    
-    func lastUpdatedTime(time: Int) -> String {
-        let updateTimeDifference = deviceTimeStamp - time
-        let epochDiff2 = updateTimeDifference
-        var updateDiff = ""
-        if epochDiff2 / 86400000 >= 1 {
-            updateDiff = "\(epochDiff2 / 86400000) days ago"
-        } else if epochDiff2 / 3600000 >= 1 {
-            updateDiff = "\(epochDiff2 / 3600000) hours ago"
-        } else if epochDiff2 / 60000 >= 1 {
-            updateDiff = "\(epochDiff2 / 3600000) mins ago"
-        }
-        return updateDiff
     }
 }

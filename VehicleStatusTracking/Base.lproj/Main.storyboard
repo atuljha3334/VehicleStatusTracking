@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iMn-Bt-a1c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jBH-8g-Uik">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -30,6 +30,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-8k-75y">
                                                     <rect key="frame" x="5" y="5" width="404" height="84"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truckNew" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-Cb-IT0">
+                                                            <rect key="frame" x="127" y="3" width="30" height="30"/>
+                                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="mJr-zK-CS1"/>
+                                                                <constraint firstAttribute="height" constant="30" id="n6j-aE-ddr"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truck Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-KK-R5A">
                                                             <rect key="frame" x="8" y="8" width="103" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -57,15 +65,17 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="84" id="3ud-cs-UeQ"/>
+                                                        <constraint firstItem="QrI-Cb-IT0" firstAttribute="centerY" secondItem="q8T-KK-R5A" secondAttribute="centerY" id="Dcw-Db-agT"/>
                                                         <constraint firstItem="q8T-KK-R5A" firstAttribute="leading" secondItem="vPJ-8k-75y" secondAttribute="leading" constant="8" id="J6H-3k-v9x"/>
                                                         <constraint firstAttribute="trailing" secondItem="wD6-RJ-uVJ" secondAttribute="trailing" constant="8" id="KsI-Dw-Iq2"/>
                                                         <constraint firstAttribute="bottom" secondItem="dXk-5F-GRB" secondAttribute="bottom" constant="8" id="PHw-lb-LEw"/>
                                                         <constraint firstItem="wD6-RJ-uVJ" firstAttribute="centerY" secondItem="q8T-KK-R5A" secondAttribute="centerY" id="S3H-Lk-9zr"/>
+                                                        <constraint firstItem="QrI-Cb-IT0" firstAttribute="leading" secondItem="q8T-KK-R5A" secondAttribute="trailing" constant="16" id="VKW-rd-boq"/>
                                                         <constraint firstItem="dXk-5F-GRB" firstAttribute="leading" secondItem="q8T-KK-R5A" secondAttribute="leading" id="aEj-2b-o9w"/>
                                                         <constraint firstItem="q8T-KK-R5A" firstAttribute="top" secondItem="vPJ-8k-75y" secondAttribute="top" constant="8" id="aJB-d3-Fxm"/>
                                                         <constraint firstItem="d4i-wO-SOE" firstAttribute="trailing" secondItem="wD6-RJ-uVJ" secondAttribute="trailing" id="aVd-gi-P2T"/>
                                                         <constraint firstItem="d4i-wO-SOE" firstAttribute="centerY" secondItem="dXk-5F-GRB" secondAttribute="centerY" id="ggC-fv-IId"/>
+                                                        <constraint firstAttribute="height" constant="75" id="qwL-rb-1Ee"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -107,34 +117,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272.463768115942" y="55.580357142857139"/>
+            <point key="canvasLocation" x="3181.1594202898555" y="55.580357142857139"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="wqn-NE-btW">
+        <scene sceneID="4PW-yc-lrG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMn-Bt-a1c" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jBH-8g-Uik" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIF-Y7-fdi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oiD-nP-U9S">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.85158981643356646" green="0.27058823529411763" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="-200" vertical="0.0"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="-300" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YKi-bD-Z75"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zKM-Sa-1Ca"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5S-0b-wzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ig-gR-zKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1362.3188405797102" y="55.580357142857139"/>
+            <point key="canvasLocation" x="2271.0144927536235" y="55.580357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="truckNew" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

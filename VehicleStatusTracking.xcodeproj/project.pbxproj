@@ -19,6 +19,7 @@
 		CEBD4E12273F83E600F11196 /* TruckStatusResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */; };
 		CEBD4E162740BB2700F11196 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E142740BB2700F11196 /* MapViewController.swift */; };
 		CEBD4E172740BB2700F11196 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBD4E152740BB2700F11196 /* MapViewController.xib */; };
+		CEBD4E1A2742138800F11196 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD4E192742138800F11196 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckStatusResponseModel.swift; sourceTree = "<group>"; };
 		CEBD4E142740BB2700F11196 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CEBD4E152740BB2700F11196 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		CEBD4E192742138800F11196 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				AADD83DB7D8245E924C78FC8 /* Pods-VehicleStatusTracking.debug.xcconfig */,
 				93E3892DCD20CC6F814F2541 /* Pods-VehicleStatusTracking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,17 +92,17 @@
 		CE1CCAAA273F780F008F41C8 /* VehicleStatusTracking */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD4E1C274220C000F11196 /* Service */,
+				CEBD4E1B274220AF00F11196 /* Model */,
+				CEBD4E182742136C00F11196 /* Base Cell */,
+				CEBD4E1D274220D400F11196 /* Code */,
 				CEBD4E132740BAF400F11196 /* Map */,
 				CE1CCAAB273F780F008F41C8 /* AppDelegate.swift */,
 				CE1CCAAD273F780F008F41C8 /* SceneDelegate.swift */,
-				CE1CCAAF273F780F008F41C8 /* ViewController.swift */,
 				CE1CCAB1273F780F008F41C8 /* Main.storyboard */,
 				CE1CCAB4273F7814008F41C8 /* Assets.xcassets */,
 				CE1CCAB6273F7814008F41C8 /* LaunchScreen.storyboard */,
 				CE1CCAB9273F7814008F41C8 /* Info.plist */,
-				CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */,
-				CEBD4E0F273F81C800F11196 /* ServiceManager.swift */,
-				CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */,
 			);
 			path = VehicleStatusTracking;
 			sourceTree = "<group>";
@@ -113,6 +114,39 @@
 				CEBD4E152740BB2700F11196 /* MapViewController.xib */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		CEBD4E182742136C00F11196 /* Base Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD4E192742138800F11196 /* BaseTableViewCell.swift */,
+			);
+			path = "Base Cell";
+			sourceTree = "<group>";
+		};
+		CEBD4E1B274220AF00F11196 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD4E11273F83E600F11196 /* TruckStatusResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEBD4E1C274220C000F11196 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD4E0F273F81C800F11196 /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CEBD4E1D274220D400F11196 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD4E0D273F81B800F11196 /* TruckListTableViewCell.swift */,
+				CE1CCAAF273F780F008F41C8 /* ViewController.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBD4E1A2742138800F11196 /* BaseTableViewCell.swift in Sources */,
 				CE1CCAB0273F780F008F41C8 /* ViewController.swift in Sources */,
 				CE1CCAAC273F780F008F41C8 /* AppDelegate.swift in Sources */,
 				CEBD4E0E273F81B800F11196 /* TruckListTableViewCell.swift in Sources */,

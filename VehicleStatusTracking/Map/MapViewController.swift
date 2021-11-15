@@ -10,7 +10,12 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
     
+    // MARK: - Outlets
+
     @IBOutlet weak var mapView: UIView!
+    
+    // MARK: - Variables
+
     var truckListData = [Data]()
     
     override func viewDidLoad() {
@@ -30,20 +35,26 @@ class MapViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - SETUP MAP
+
     func setupMarkerOnMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: truckListData[0].lastRunningState?.lat ?? 30.838, longitude: truckListData[0].lastRunningState?.lng ?? 75.972, zoom: 10.0)
+        let camera = GMSCameraPosition.camera(withLatitude: truckListData[0].lastWaypoint?.lat ?? 30.838, longitude: truckListData[0].lastWaypoint?.lng ?? 75.972, zoom: 10.0)
         let mapSubView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView.addSubview(mapSubView)
         for i in truckListData {
-            let lat = i.lastRunningState?.lat ?? 0.0
-            let lon = i.lastRunningState?.lng ?? 0.0
+            let lat = i.lastWaypoint?.lat ?? 0.0
+            let lon = i.lastWaypoint?.lng ?? 0.0
             print(lat, lon)
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            if i.lastRunningState?.truckRunningState == 0 {
+            if i.lastWaypoint?.ignitionOn == false {
                 marker.icon = UIImage(named: "truckRed")
             } else {
-                marker.icon = UIImage(named: "truckGreen")
+                if i.lastRunningState?.truckRunningState == 1 {
+                    marker.icon = UIImage(named: "truckGreen")
+                } else {
+                    marker.icon = UIImage(named: "truckBlue")
+                }
             }
             marker.map = mapSubView
         }
