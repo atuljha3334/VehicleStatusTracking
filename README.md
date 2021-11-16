@@ -1,7 +1,7 @@
 Steps to run the application:
 
 1. CLone the project in the machine.
-2. Checkout origin/Authenticator/LoginPage branch.
+2. Checkout origin/VehicleStatusTracking.
 3. Click on show in finder, select the xcworkspace file.
 4. Open terminal, change directory to the project folder.
 5. Run the command "pod init".
